@@ -151,9 +151,10 @@ class App extends Component {
     total: ""
   };
 
-  handleAdd = (id) => {
+  handleAdd = (id, item) => {
     const Chart = this.state.chart
     const Carros = this.state.toBuy.find((item) => item.id === id);
+    
    this.setState({
      chart: this.state.chart.concat(Carros),
      total: this.state.total.concat(Chart)
